@@ -1,0 +1,43 @@
+Line item,FY2023,FY2024,FY2025
+Revenue,1000.0,1120.0,1250.0
+Cost of goods sold,550.0,610.0,675.0
+SG&A,120.0,130.0,145.0
+R&D,50.0,55.0,60.0
+Depreciation & amortization,40.0,45.0,50.0
+Operating income (EBIT),240.0,280.0,320.0
+Interest expense,15.0,14.0,12.0
+Interest income,5.0,6.0,8.0
+Pre-tax income,230.0,272.0,316.0
+Income tax,48.3,57.1,66.4
+Net income (consolidated),181.7,214.9,249.6
+Net income to common shareholders,181.7,214.9,249.6
+Cash & cash equivalents,120.0,155.0,190.0
+Short-term investments,0.0,0.0,0.0
+Accounts receivable,110.0,122.0,135.0
+Inventory,60.0,68.0,75.0
+Total current assets,310.0,367.0,425.0
+Gross PP&E,450.0,510.0,580.0
+Accumulated depreciation,150.0,195.0,245.0
+Net PP&E,300.0,315.0,335.0
+Total assets,700.0,777.0,860.0
+Accounts payable,80.0,88.0,96.0
+Total current liabilities,140.0,152.0,164.0
+Short-term debt & current portion of long-term debt,20.0,20.0,20.0
+Long-term debt,180.0,160.0,140.0
+Total liabilities,380.0,377.0,374.0
+Common stock & APIC,120.0,125.0,130.0
+Retained earnings,200.0,275.0,356.0
+Treasury stock,0.0,0.0,0.0
+Total shareholders' equity,320.0,400.0,486.0
+Non-controlling interests,0.0,0.0,0.0
+Cash from operations,210.0,245.0,280.0
+Change in working capital,-20.0,-10.0,-12.0
+Capital expenditure,-50.0,-60.0,-70.0
+Cash from investing,-50.0,-60.0,-70.0
+Debt issued,0.0,0.0,0.0
+Debt repaid,-20.0,-20.0,-20.0
+Dividends paid,-30.0,-35.0,-40.0
+Share buybacks,-40.0,-95.0,-115.0
+Cash from financing,-90.0,-150.0,-175.0
+Beginning cash (cash-flow statement),50.0,120.0,155.0
+Ending cash (cash-flow statement),120.0,155.0,190.0

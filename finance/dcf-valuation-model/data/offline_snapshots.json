@@ -1,0 +1,450 @@
+{
+  "AAPL": {
+    "ticker": "AAPL",
+    "company_name": "Apple Inc.",
+    "currency": "USD",
+    "years": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "revenue": [
+      394328000000.0,
+      383285000000.0,
+      391035000000.0,
+      416161000000.0
+    ],
+    "ebit": [
+      119437000000.0,
+      114301000000.0,
+      123216000000.0,
+      133050000000.0
+    ],
+    "da": [
+      11104000000.0,
+      11519000000.0,
+      11445000000.0,
+      11698000000.0
+    ],
+    "capex": [
+      10708000000.0,
+      10959000000.0,
+      9447000000.0,
+      12715000000.0
+    ],
+    "nwc_change": [
+      -1200000000.0,
+      6577000000.0,
+      -3651000000.0,
+      25000000000.0
+    ],
+    "effective_tax_rate": [
+      0.16204461684424407,
+      0.14719174228036858,
+      0.24091185164189982,
+      0.15610002335586043
+    ],
+    "historical_fcff": [
+      101678877097.97401,
+      91459836665.61159,
+      99180805288.09167,
+      86263891892.50276
+    ],
+    "current_price": 333.02,
+    "shares_outstanding": 14594180000.0,
+    "total_cash": 62399000576.0,
+    "total_debt": 84343996416.0,
+    "beta": 1.085,
+    "market_cap": 4860153954304.0,
+    "sector": "Technology",
+    "industry": "Consumer Electronics",
+    "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple Vision Pro, Apple TV, Apple Watch, Beats products, and HomePod, as well as Apple brande",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  },
+  "MSFT": {
+    "ticker": "MSFT",
+    "company_name": "Microsoft Corporation",
+    "currency": "USD",
+    "years": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "revenue": [
+      211915000000.0,
+      245122000000.0,
+      281724000000.0,
+      331839000000.0
+    ],
+    "ebit": [
+      88523000000.0,
+      109433000000.0,
+      128528000000.0,
+      155237000000.0
+    ],
+    "da": [
+      13861000000.0,
+      20958000000.0,
+      29433000000.0,
+      38534000000.0
+    ],
+    "capex": [
+      28107000000.0,
+      44477000000.0,
+      64551000000.0,
+      115948000000.0
+    ],
+    "nwc_change": [
+      2388000000.0,
+      -1824000000.0,
+      5350000000.0,
+      4895000000.0
+    ],
+    "effective_tax_rate": [
+      0.18978625253328257,
+      0.18231326597827197,
+      0.17629644009803683,
+      0.19396265985271252
+    ],
+    "historical_fcff": [
+      55088551566.99623,
+      67786912364.19975,
+      65400971147.07953,
+      42817818572.44446
+    ],
+    "current_price": 512.9,
+    "shares_outstanding": 7425545491.0,
+    "total_cash": 76842999808.0,
+    "total_debt": 128812998656.0,
+    "beta": 1.108,
+    "market_cap": 3808562511872.0,
+    "sector": "Technology",
+    "industry": "Software - Infrastructure",
+    "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applications, business solution applications, software development tools, desktop and server management tools, and video games; and devices, such as PCs, tablets, gaming and entertainment consoles, other inte",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "company_name": "NVIDIA Corporation",
+    "currency": "USD",
+    "years": [
+      "2023",
+      "2024",
+      "2025",
+      "2026"
+    ],
+    "revenue": [
+      26974000000.0,
+      60922000000.0,
+      130497000000.0,
+      215938000000.0
+    ],
+    "ebit": [
+      5577000000.0,
+      32972000000.0,
+      81453000000.0,
+      130387000000.0
+    ],
+    "da": [
+      1543000000.0,
+      1508000000.0,
+      1864000000.0,
+      2843000000.0
+    ],
+    "capex": [
+      1833000000.0,
+      1069000000.0,
+      3236000000.0,
+      6042000000.0
+    ],
+    "nwc_change": [
+      2207000000.0,
+      3722000000.0,
+      9383000000.0,
+      15949000000.0
+    ],
+    "effective_tax_rate": [
+      0.21,
+      0.1199952687917677,
+      0.13264941803727417,
+      0.1511700247437257
+    ],
+    "historical_fcff": [
+      1908830000.0,
+      25732515997.397835,
+      59893306952.60991,
+      91528393983.73982
+    ],
+    "current_price": 228.38,
+    "shares_outstanding": 24147000000.0,
+    "total_cash": 62469001216.0,
+    "total_debt": 38860001280.0,
+    "beta": 2.217,
+    "market_cap": 5514691870720.0,
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and Graphics segments. The Compute & Networking segment provides data center accelerated computing and networking platforms and artificial intelligence solutions and software, and automotive platforms and",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  },
+  "GOOGL": {
+    "ticker": "GOOGL",
+    "company_name": "Alphabet Inc.",
+    "currency": "USD",
+    "years": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "revenue": [
+      282836000000.0,
+      307394000000.0,
+      350018000000.0,
+      402836000000.0
+    ],
+    "ebit": [
+      74842000000.0,
+      84293000000.0,
+      112390000000.0,
+      129039000000.0
+    ],
+    "da": [
+      13475000000.0,
+      11946000000.0,
+      15311000000.0,
+      21136000000.0
+    ],
+    "capex": [
+      31485000000.0,
+      32251000000.0,
+      52535000000.0,
+      91447000000.0
+    ],
+    "nwc_change": [
+      2235000000.0,
+      3845000000.0,
+      8406000000.0,
+      -618000000.0
+    ],
+    "effective_tax_rate": [
+      0.1592081650964558,
+      0.13908559562280529,
+      0.16439510912657013,
+      0.16783146336242177
+    ],
+    "historical_fcff": [
+      42681542507.85104,
+      48419057888.16687,
+      48283633685.264786,
+      37689195799.17645
+    ],
+    "current_price": 344.08,
+    "shares_outstanding": 5867155790.0,
+    "total_cash": 242473992192.0,
+    "total_debt": 120790999040.0,
+    "beta": 1.225,
+    "market_cap": 4208075997184.0,
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Cloud, and Other Bets segments. The Google Services segment provides products and services, including ads, Android, Chrome, devices, Gmail, Google Drive, Google Maps, Google Photos, Google Play, Search, a",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  },
+  "AMZN": {
+    "ticker": "AMZN",
+    "company_name": "Amazon.com, Inc.",
+    "currency": "USD",
+    "years": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "revenue": [
+      513983000000.0,
+      574785000000.0,
+      637959000000.0,
+      716924000000.0
+    ],
+    "ebit": [
+      12248000000.0,
+      36852000000.0,
+      68593000000.0,
+      79975000000.0
+    ],
+    "da": [
+      41921000000.0,
+      48663000000.0,
+      52795000000.0,
+      65756000000.0
+    ],
+    "capex": [
+      63645000000.0,
+      52729000000.0,
+      82999000000.0,
+      131819000000.0
+    ],
+    "nwc_change": [
+      20886000000.0,
+      11541000000.0,
+      15541000000.0,
+      19969000000.0
+    ],
+    "effective_tax_rate": [
+      0.21,
+      0.21,
+      0.21,
+      0.21
+    ],
+    "historical_fcff": [
+      -32934080000.0,
+      13506080000.0,
+      8443470000.0,
+      -22851750000.0
+    ],
+    "current_price": 249.15,
+    "shares_outstanding": 10786313572.0,
+    "total_cash": 122988003328.0,
+    "total_debt": 251635007488.0,
+    "beta": 1.443,
+    "market_cap": 2687409848320.0,
+    "sector": "Consumer Cyclical",
+    "industry": "Internet Retail",
+    "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates through three segments: North America, International, and Amazon Web Services (AWS). It also manufactures and sells electronic devices, including Kindle, fire tablets, fire TVs, echo, ring, blink, and ",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  },
+  "KO": {
+    "ticker": "KO",
+    "company_name": "The Coca-Cola Company",
+    "currency": "USD",
+    "years": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "revenue": [
+      43004000000.0,
+      45754000000.0,
+      47061000000.0,
+      47941000000.0
+    ],
+    "ebit": [
+      12042000000.0,
+      13098000000.0,
+      14022000000.0,
+      14911000000.0
+    ],
+    "da": [
+      1260000000.0,
+      1128000000.0,
+      1075000000.0,
+      1050000000.0
+    ],
+    "capex": [
+      1484000000.0,
+      1852000000.0,
+      2064000000.0,
+      2112000000.0
+    ],
+    "nwc_change": [
+      605000000.0,
+      846000000.0,
+      6234000000.0,
+      7208000000.0
+    ],
+    "effective_tax_rate": [
+      0.1809857949683382,
+      0.17364113650401483,
+      0.1862295583065872,
+      0.1788348543567946
+    ],
+    "historical_fcff": [
+      9033569056.991272,
+      9253648394.070414,
+      4187689133.4250355,
+      3974393486.685837
+    ],
+    "current_price": 86.08,
+    "shares_outstanding": 4302549243.0,
+    "total_cash": 16371000320.0,
+    "total_debt": 44260999168.0,
+    "beta": 0.342,
+    "market_cap": 370363432960.0,
+    "sector": "Consumer Defensive",
+    "industry": "Beverages - Non-Alcoholic",
+    "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drinks and flavors; water, sports, coffee, and tea; juice, value-added dairy, and plant-based beverages; and emerging beverages. It also offers beverage concentrates and syrups, as well as fountain syrups",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  },
+  "TSLA": {
+    "ticker": "TSLA",
+    "company_name": "Tesla, Inc.",
+    "currency": "USD",
+    "years": [
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ],
+    "revenue": [
+      81462000000.0,
+      96773000000.0,
+      97690000000.0,
+      94827000000.0
+    ],
+    "ebit": [
+      13832000000.0,
+      8891000000.0,
+      7760000000.0,
+      4849000000.0
+    ],
+    "da": [
+      3747000000.0,
+      4667000000.0,
+      5368000000.0,
+      6148000000.0
+    ],
+    "capex": [
+      7172000000.0,
+      8899000000.0,
+      11342000000.0,
+      8527000000.0
+    ],
+    "nwc_change": [
+      3712000000.0,
+      2248000000.0,
+      -81000000.0,
+      -642000000.0
+    ],
+    "effective_tax_rate": [
+      0.08251330271885705,
+      0.21,
+      0.20433815350389323,
+      0.2696097006441834
+    ],
+    "historical_fcff": [
+      5553675996.7927685,
+      543890000.0,
+      281335928.80978775,
+      1804662561.576355
+    ],
+    "current_price": 354.81,
+    "shares_outstanding": 3949547394.0,
+    "total_cash": 43524001792.0,
+    "total_debt": 16080000000.0,
+    "beta": 1.845,
+    "market_cap": 1401338986496.0,
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in two segments, Automotive; and Energy Generation and Storage. The company offers electric vehicles, as well as sells automotive regulatory credits; and non-warranty maintenance services and collision, au",
+    "financial_currency": "USD",
+    "as_of": "2026-10-01"
+  }
+}

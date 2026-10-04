@@ -1,0 +1,2 @@
+pyserial>=3.5
+yfinance>=0.2.55

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Arduino / build output
+build/
+*.hex
+*.elf
+*.bin
+
+# Excel / LibreOffice temp & lock files
+~$*.xlsx
+~$*.xls
+.~lock.*#
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Personal documents – never publish
+*CV*.pdf
+*CV*.docx
+cover_notes*
+*job_leads*
+gmail-*
+*.pem

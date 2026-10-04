@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Test / tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Streamlit secrets (config.toml is fine to commit)
+.streamlit/secrets.toml
+
+# Excel / LibreOffice temp & lock files
+~$*.xlsx
+~$*.xls
+.~lock.*#
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

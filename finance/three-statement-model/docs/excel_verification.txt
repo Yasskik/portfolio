@@ -1,0 +1,35 @@
+AAPL Base iterative                      cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+AAPL Base breaker                        cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+AAPL Bull iterative                      cells  738  mismatches 0  worst 1.2e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+AAPL Bull breaker                        cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+AAPL Bear iterative                      cells  738  mismatches 0  worst 1.2e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+AAPL Bear breaker                        cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+AAPL revolver stress iterative           cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 21,969
+AAPL revolver stress breaker             cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 21,932
+AAPL Base beginning-balance method       cells  738  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+MSFT Base iterative                      cells  742  mismatches 0  worst 4.7e-14  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+MSFT Base breaker                        cells  742  mismatches 0  worst 5.4e-15  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+MSFT Bull iterative                      cells  742  mismatches 0  worst 2.3e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+MSFT Bull breaker                        cells  742  mismatches 0  worst 1.2e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+MSFT Bear iterative                      cells  742  mismatches 0  worst 2.3e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+MSFT Bear breaker                        cells  742  mismatches 0  worst 2.3e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+KO Base iterative                        cells  739  mismatches 0  worst 2.9e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+KO Base breaker                          cells  739  mismatches 0  worst 1.5e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+KO Bull iterative                        cells  739  mismatches 0  worst 1.5e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+KO Bull breaker                          cells  739  mismatches 0  worst 1.5e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+KO Bear iterative                        cells  739  mismatches 0  worst 1.5e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+KO Bear breaker                          cells  739  mismatches 0  worst 2.9e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+T Base iterative                         cells  736  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+T Base breaker                           cells  736  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+T Bull iterative                         cells  736  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+T Bull breaker                           cells  736  mismatches 0  worst 1.2e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+T Bear iterative                         cells  736  mismatches 0  worst 1.2e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+T Bear breaker                           cells  736  mismatches 0  worst 1.2e-10  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+F Base iterative                         cells  739  mismatches 0  worst 4.8e-13  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+F Base breaker                           cells  739  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+F Bull iterative                         cells  739  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+F Bull breaker                           cells  739  mismatches 0  worst 2.1e-13  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 0
+F Bear iterative                         cells  739  mismatches 0  worst 2.9e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 18,727  SHORTFALL
+F Bear breaker                           cells  739  mismatches 0  worst 5.8e-11  errors 0  BS check max 0.000000  Checks!max 0.000000  revolver max 18,727  SHORTFALL
+
+33 workbooks, 24,378 values compared, 0 mismatches, 0 error cells, all balance checks 0: True

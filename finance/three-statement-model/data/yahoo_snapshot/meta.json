@@ -1,0 +1,26 @@
+{
+  "downloaded": "2026-10-01",
+  "source": "Yahoo Finance via yfinance 1.7.0 (Ticker.financials / balance_sheet / cashflow, annual)",
+  "tickers": {
+    "AAPL": {
+      "name": "Apple Inc.",
+      "currency": "USD"
+    },
+    "MSFT": {
+      "name": "Microsoft Corporation",
+      "currency": "USD"
+    },
+    "KO": {
+      "name": "The Coca-Cola Company",
+      "currency": "USD"
+    },
+    "T": {
+      "name": "AT&T Inc.",
+      "currency": "USD"
+    },
+    "F": {
+      "name": "Ford Motor Company",
+      "currency": "USD"
+    }
+  }
+}

@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Desktop Financial Ticker – START HERE</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">body{font-family:"DejaVu Sans",Arial,sans-serif;max-width:900px;margin:2em auto;padding:0 1em;line-height:1.45;color:#222;font-size:11pt}
+h1{border-bottom:2px solid #1a5fb4;padding-bottom:.2em;color:#1a5fb4;margin-top:1.6em;page-break-after:avoid}
+h2{color:#26a269;page-break-after:avoid}
+table{border-collapse:collapse;margin:.8em 0;width:100%;page-break-inside:avoid}
+th,td{border:1px solid #bbb;padding:4px 8px;vertical-align:top}
+th{background:#e8eef7}
+tr:nth-child(even) td{background:#f7f7f7}
+pre{background:#f4f4f4;border:1px solid #ddd;padding:.6em;overflow-x:auto;font-size:9pt;page-break-inside:avoid}
+code{font-family:"DejaVu Sans Mono",monospace;font-size:92%}
+header .title{color:#1a5fb4}
+@page{size:A4;margin:14mm}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Desktop Financial Ticker – START HERE</h1>
+<p class="subtitle">Arduino Uno + 1602A 16x2 LCD + 4x4 keypad – beginner
+guide</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#what-this-project-does" id="toc-what-this-project-does">0.
+What this project does</a></li>
+<li><a href="#whats-in-the-zip" id="toc-whats-in-the-zip">1. What’s in
+the zip</a></li>
+<li><a href="#parts-list" id="toc-parts-list">2. Parts list</a></li>
+<li><a href="#safety-rules-read-before-wiring" id="toc-safety-rules-read-before-wiring">3. Safety rules (read before
+wiring)</a></li>
+<li><a href="#wiring-step-by-step" id="toc-wiring-step-by-step">4.
+Wiring, step by step</a>
+<ul>
+<li><a href="#lcd-16-pins-4-bit-mode" id="toc-lcd-16-pins-4-bit-mode">4.1 LCD (16 pins, 4-bit mode)</a></li>
+<li><a href="#keypad-8-pins" id="toc-keypad-8-pins">4.2 Keypad (8
+pins)</a></li>
+<li><a href="#contrast-potentiometer-or-resistor" id="toc-contrast-potentiometer-or-resistor">4.3 Contrast: potentiometer
+or resistor</a></li>
+<li><a href="#wiring-diagram" id="toc-wiring-diagram">4.4 Wiring
+diagram</a></li>
+<li><a href="#final-check-before-plugging-in-usb" id="toc-final-check-before-plugging-in-usb">4.5 Final check before
+plugging in USB</a></li>
+</ul></li>
+<li><a href="#arduino-ide-install-add-the-library-upload" id="toc-arduino-ide-install-add-the-library-upload">5. Arduino IDE:
+install, add the library, upload</a>
+<ul>
+<li><a href="#install-arduino-ide-2-on-zorin-os-ubuntu" id="toc-install-arduino-ide-2-on-zorin-os-ubuntu">5.1 Install Arduino
+IDE 2 on Zorin OS / Ubuntu</a></li>
+<li><a href="#serial-port-permission-do-this-once" id="toc-serial-port-permission-do-this-once">5.2 Serial port permission
+(do this once)</a></li>
+<li><a href="#install-the-keypad-library" id="toc-install-the-keypad-library">5.3 Install the Keypad
+library</a></li>
+<li><a href="#open-the-sketch" id="toc-open-the-sketch">5.4 Open the
+sketch</a></li>
+<li><a href="#select-board-and-port-then-upload" id="toc-select-board-and-port-then-upload">5.5 Select board and port,
+then upload</a></li>
+</ul></li>
+<li><a href="#first-power-on" id="toc-first-power-on">6. First
+power-on</a>
+<ul>
+<li><a href="#contrast" id="toc-contrast">6.1 Contrast</a></li>
+<li><a href="#key-test-check-your-keypad-wiring" id="toc-key-test-check-your-keypad-wiring">6.2 Key test (check your
+keypad wiring)</a></li>
+</ul></li>
+<li><a href="#pc-side-the-bridge" id="toc-pc-side-the-bridge">7. PC
+side: the bridge</a>
+<ul>
+<li><a href="#automatic-setup-zorin-os-ubuntu" id="toc-automatic-setup-zorin-os-ubuntu">7.1 Automatic setup (Zorin OS /
+Ubuntu)</a></li>
+<li><a href="#manual-setup" id="toc-manual-setup">7.2 Manual
+setup</a></li>
+<li><a href="#important-one-program-per-port" id="toc-important-one-program-per-port">7.3 IMPORTANT: one program per
+port</a></li>
+<li><a href="#windows-if-youre-not-on-linux" id="toc-windows-if-youre-not-on-linux">7.4 Windows (if you’re not on
+Linux)</a></li>
+</ul></li>
+<li><a href="#daily-use" id="toc-daily-use">8. Daily use</a></li>
+<li><a href="#troubleshooting" id="toc-troubleshooting">9.
+Troubleshooting</a></li>
+</ul>
+</nav>
+<h1 id="what-this-project-does">0. What this project does</h1>
+<p>A small box on your desk shows the price of gold, silver, EUR/USD,
+Bitcoin, NVIDIA or Apple. You pick the ticker with the keypad. The
+Arduino asks your PC for the price over the USB cable, and a small
+Python program on the PC (<code>ticker_bridge.py</code>) looks the price
+up on Yahoo Finance and sends it back. <strong>Prices are only fetched
+when you ask</strong> (when you choose a ticker or press refresh).</p>
+<pre><code> [LCD + keypad] --wires--&gt; [Arduino Uno] &lt;--USB cable--&gt; [PC: ticker_bridge.py] &lt;--internet--&gt; Yahoo Finance</code></pre>
+<h1 id="whats-in-the-zip">1. What’s in the zip</h1>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>File / folder</th>
+<th>What it is for</th>
+<th>Do I need to touch it?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>START_HERE.md</code> / <code>START_HERE.pdf</code> /
+<code>START_HERE.html</code></td>
+<td>This guide (same content, three formats)</td>
+<td>Read it</td>
+</tr>
+<tr class="even">
+<td><code>ticker_firmware/ticker_firmware.ino</code></td>
+<td><strong>The Arduino sketch.</strong> Open this in the Arduino IDE
+and upload it</td>
+<td>Yes (open + upload)</td>
+</tr>
+<tr class="odd">
+<td><code>ticker_bridge.py</code></td>
+<td>The PC program that answers the Arduino’s price requests</td>
+<td>Run it</td>
+</tr>
+<tr class="even">
+<td><code>requirements.txt</code></td>
+<td>List of Python packages the bridge needs (<code>pyserial</code>,
+<code>yfinance</code>)</td>
+<td>Used by setup</td>
+</tr>
+<tr class="odd">
+<td><code>setup_linux.sh</code></td>
+<td>One-command PC setup for Zorin OS / Ubuntu (permissions, Python,
+start bridge)</td>
+<td>Run it once</td>
+</tr>
+<tr class="even">
+<td><code>wiring_guide.md</code></td>
+<td>Short wiring reference (same tables as section 4)</td>
+<td>Reference</td>
+</tr>
+<tr class="odd">
+<td><code>README.md</code></td>
+<td>Short technical overview</td>
+<td>Optional</td>
+</tr>
+<tr class="even">
+<td><code>tests/</code></td>
+<td>Automated tests used during development</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h1 id="parts-list">2. Parts list</h1>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Qty</th>
+<th>Part</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td>Arduino <strong>Uno R3</strong> (or Nano) + USB cable</td>
+<td>Uno: USB-B cable. Nano: usually mini-USB or USB-C</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td><strong>1602A</strong> 16x2 character LCD (HD44780 compatible,
+v5.5)</td>
+<td>The plain parallel version (no I2C “backpack”)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td><strong>4x4 matrix keypad</strong>, 8-pin header
+<code>R4 R3 R2 R1 C1 C2 C3 C4</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td><strong>10 kΩ potentiometer</strong> (trimmer)</td>
+<td>For the LCD contrast. Without one, use a 1 kΩ–2.2 kΩ resistor (see
+4.3)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td><strong>220 Ω resistor</strong></td>
+<td>For the backlight (red-red-brown)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td>Breadboard (half size or larger)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">~25</td>
+<td>Jumper wires (male-male; male-female also useful for the
+keypad)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td><strong>16-pin male header strip</strong> (for the LCD)</td>
+<td>The LCD’s holes are empty, so you have to solder the header on</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">–</td>
+<td>Soldering iron + solder</td>
+<td>See the note below</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Soldering note.</strong> Your LCD has 16 empty holes. Push
+the short ends of a 16-pin male header in from the
+<strong>front</strong> (display side) so that the long pins stick out
+the <strong>back</strong> and plug into the breadboard. Solder
+<strong>one pin first</strong>, check that the header is straight, then
+solder the other 15. Each joint should be a small shiny cone and must
+not touch its neighbour. Let it cool before plugging it in. If you have
+never soldered: practise on a spare header, and use about 330 °C with
+leaded or 350 °C with lead-free solder.</p>
+<h1 id="safety-rules-read-before-wiring">3. Safety rules (read before
+wiring)</h1>
+<ol type="1">
+<li><strong>Wire everything with the USB cable unplugged.</strong> Only
+plug USB in after you have checked your wiring.</li>
+<li><strong>Never swap VDD and GND</strong> on the LCD (pins 2 and 1).
+This can destroy the LCD in seconds.</li>
+<li><strong>Find pin 1 and pin 16 on the LCD before you start.</strong>
+Pin 1 is labeled <code>GND</code> (sometimes <code>VSS</code>) and pin
+16 is <code>BLK</code> (sometimes <code>K</code>). Count from pin 1.
+Check them again before you power up.</li>
+<li><strong>Backlight: always use the 220 Ω resistor</strong> between 5V
+and BLA (pin 15). Many 1602A boards already have an on-board resistor
+(the back of yours shows a part marked <strong>R8</strong> near the top,
+which is probably it), but leave the external resistor in unless you
+have confirmed the on-board one. It only costs a little brightness.</li>
+<li><strong>Leave D0 and D1 free.</strong> They carry the USB serial
+data. Anything connected there breaks uploading and the PC link.</li>
+<li>If something gets <strong>hot or smells</strong>, unplug USB
+immediately and re-check the wiring.</li>
+<li>Don’t rewire while the board is powered, even “just one wire”.</li>
+</ol>
+<h1 id="wiring-step-by-step">4. Wiring, step by step</h1>
+<p>Put the LCD (with its soldered header) into the breadboard. Connect
+the Arduino’s <strong>5V</strong> to the breadboard’s <strong>+
+rail</strong> and <strong>GND</strong> to the <strong>− rail</strong>.
+Everything that says “5V” or “GND” below goes to those rails.</p>
+<h2 id="lcd-16-pins-4-bit-mode">4.1 LCD (16 pins, 4-bit mode)</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">LCD pin</th>
+<th style="text-align: center;">Label</th>
+<th style="text-align: center;">Arduino pin</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;"><strong>GND</strong> (− rail)</td>
+<td>ground, check twice</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">VDD</td>
+<td style="text-align: center;"><strong>5V</strong> (+ rail)</td>
+<td>power, never swap with pin 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">VO</td>
+<td style="text-align: center;"><strong>pot middle pin</strong></td>
+<td>contrast. Pot outer pins: one to 5V, one to GND</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">RS</td>
+<td style="text-align: center;"><strong>D12</strong></td>
+<td>register select</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">RW</td>
+<td style="text-align: center;"><strong>GND</strong></td>
+<td>tie to ground (“write only”)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">E</td>
+<td style="text-align: center;"><strong>D11</strong></td>
+<td>enable</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">D0</td>
+<td style="text-align: center;">–</td>
+<td>not connected</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">D1</td>
+<td style="text-align: center;">–</td>
+<td>not connected</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">D2</td>
+<td style="text-align: center;">–</td>
+<td>not connected</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">D3</td>
+<td style="text-align: center;">–</td>
+<td>not connected</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">D4</td>
+<td style="text-align: center;"><strong>D5</strong></td>
+<td>careful: the order is “crossed”</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">D5</td>
+<td style="text-align: center;"><strong>D4</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">D6</td>
+<td style="text-align: center;"><strong>D3</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">D7</td>
+<td style="text-align: center;"><strong>D2</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">BLA</td>
+<td style="text-align: center;"><strong>5V through 220 Ω</strong></td>
+<td>backlight + (anode)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">BLK</td>
+<td style="text-align: center;"><strong>GND</strong></td>
+<td>backlight − (cathode)</td>
+</tr>
+</tbody>
+</table>
+<p>This is the same wiring as the Arduino IDE example <em>File →
+Examples → LiquidCrystal → HelloWorld</em>, so every beginner tutorial
+for that example matches your setup.</p>
+<h2 id="keypad-8-pins">4.2 Keypad (8 pins)</h2>
+<p>Looking at the keypad header, the pins are labeled <strong>R4 R3 R2
+R1 C1 C2 C3 C4</strong> (in that order).</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Header pin (left → right)</th>
+<th style="text-align: center;">Label</th>
+<th style="text-align: center;">Arduino pin</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">R4</td>
+<td style="text-align: center;"><strong>D7</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">R3</td>
+<td style="text-align: center;"><strong>D8</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;"><strong>D9</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;"><strong>D10</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">C1</td>
+<td style="text-align: center;"><strong>D6</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">C2</td>
+<td style="text-align: center;"><strong>A0</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">C3</td>
+<td style="text-align: center;"><strong>A1</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">C4</td>
+<td style="text-align: center;"><strong>A2</strong></td>
+</tr>
+</tbody>
+</table>
+<p>No resistors are needed for the keypad. The expected layout is:</p>
+<pre><code>          C1   C2   C3   C4
+   R1  [  1 ][  2 ][  3 ][  A ]
+   R2  [  4 ][  5 ][  6 ][  B ]
+   R3  [  7 ][  8 ][  9 ][  C ]
+   R4  [  * ][  0 ][  # ][  D ]</code></pre>
+<p>The keypad PCB numbers its switches S1–S16 <strong>down the
+columns</strong>, so S2 is <em>not</em> the “2” key. Ignore the
+S-numbers; the key test in section 6.2 tells you exactly what each key
+sends.</p>
+<h2 id="contrast-potentiometer-or-resistor">4.3 Contrast: potentiometer
+or resistor</h2>
+<ul>
+<li><strong>With the 10 kΩ pot (recommended):</strong> the two outer
+pins go to 5V and GND (either way round) and the middle pin goes to LCD
+pin 3 (VO).</li>
+<li><strong>Without a pot:</strong> put a resistor from <strong>VO (pin
+3) to GND</strong>. Lower resistance gives darker characters. Start with
+<strong>1 kΩ</strong>. Dark boxes behind the text mean it’s too dark, so
+try 2.2 kΩ or 3.3 kΩ. Very faint text means it’s too light, so try 470
+Ω. Connecting VO straight to GND usually works but is often too
+dark.</li>
+</ul>
+<h2 id="wiring-diagram">4.4 Wiring diagram</h2>
+<pre><code>                           Arduino Uno / Nano
+                    +--------------------------+
+ LCD 1  GND --------| GND                  D12 |-------- LCD 4  RS
+ LCD 2  VDD --------| 5V                   D11 |-------- LCD 6  E
+ LCD 5  RW  --------| GND                  D10 |-------- keypad R1
+ LCD 16 BLK --------| GND                   D9 |-------- keypad R2
+ LCD 15 BLA -[220R]-| 5V                    D8 |-------- keypad R3
+                    |                       D7 |-------- keypad R4
+ pot outer pin -----| 5V                    D6 |-------- keypad C1
+ pot outer pin -----| GND                   D5 |-------- LCD 11 D4
+                    |                       D4 |-------- LCD 12 D5
+                    |                       D3 |-------- LCD 13 D6
+ keypad C2 ---------| A0                    D2 |-------- LCD 14 D7
+ keypad C3 ---------| A1               D1 (TX) |  leave free (USB serial)
+ keypad C4 ---------| A2               D0 (RX) |  leave free (USB serial)
+                    |          [USB] =====&gt; PC |
+                    +--------------------------+
+ pot middle pin (wiper) ----&gt; LCD 3 VO     (contrast)
+ LCD 7..10 (D0..D3): not connected
+ (The Uno has only one 5V pin and three GND pins: take all 5V/GND from the breadboard rails.)</code></pre>
+<h2 id="final-check-before-plugging-in-usb">4.5 Final check before
+plugging in USB</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>LCD pin 1 → GND, pin 2 → 5V (not
+swapped!)</label></li>
+<li><label><input type="checkbox"></input>LCD pin 15 goes through the 220 Ω
+resistor</label></li>
+<li><label><input type="checkbox"></input>LCD pin 5 (RW) → GND</label></li>
+<li><label><input type="checkbox"></input>Nothing is connected to D0 or
+D1</label></li>
+<li><label><input type="checkbox"></input>No bare wire ends touching each
+other, and no solder bridges on the LCD header</label></li>
+</ul>
+<h1 id="arduino-ide-install-add-the-library-upload">5. Arduino IDE:
+install, add the library, upload</h1>
+<h2 id="install-arduino-ide-2-on-zorin-os-ubuntu">5.1 Install Arduino
+IDE 2 on Zorin OS / Ubuntu</h2>
+<p><strong>Option A – AppImage (official):</strong></p>
+<ol type="1">
+<li><p>Go to <a href="https://www.arduino.cc/en/software" class="uri">https://www.arduino.cc/en/software</a> and download
+<strong>Linux AppImage 64 bits (X86-64)</strong>.</p></li>
+<li><p>Open a terminal in your Downloads folder and run:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x arduino-ide_<span class="pp">*</span>_Linux_64bit.AppImage</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">./arduino-ide_*_Linux_64bit.AppImage</span></span></code></pre></div></li>
+<li><p>If it complains about <strong>FUSE / libfuse.so.2</strong>,
+install it: <code>sudo apt install libfuse2</code> (Ubuntu 22.04 / Zorin
+17) or <code>sudo apt install libfuse2t64</code> (Ubuntu 24.04 and
+newer).</p></li>
+</ol>
+<p><strong>Option B – Flatpak / Software store:</strong> in Zorin’s
+<em>Software</em> app search for “Arduino IDE” (version 2), or run
+<code>flatpak install flathub cc.arduino.IDE2</code>.</p>
+<h2 id="serial-port-permission-do-this-once">5.2 Serial port permission
+(do this once)</h2>
+<p>Linux only lets members of the <strong>dialout</strong> group use
+serial ports. Without it, uploading fails with “Permission denied
+/dev/ttyACM0”.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-a</span> <span class="at">-G</span> dialout <span class="va">$USER</span></span></code></pre></div>
+<p>Then <strong>log out and back in</strong> (or restart the PC).
+<code>setup_linux.sh</code> does this for you too.</p>
+<h2 id="install-the-keypad-library">5.3 Install the Keypad library</h2>
+<ol type="1">
+<li>In the IDE click the <strong>Library Manager</strong> icon (the
+books on the left) or use <em>Sketch → Include Library → Manage
+Libraries…</em></li>
+<li>Search for <strong>Keypad</strong>.</li>
+<li>Install the one <strong>by Mark Stanley, Alexander Brevig</strong>.
+(Other libraries also have “Keypad” in their name; use this one.)</li>
+<li><strong>LiquidCrystal</strong> is built into the IDE. If the upload
+later says <code>LiquidCrystal.h: No such file</code>, install
+“LiquidCrystal” by Arduino from the same Library Manager.</li>
+</ol>
+<h2 id="open-the-sketch">5.4 Open the sketch</h2>
+<ul>
+<li><strong>Easiest:</strong> unzip the project, then in the IDE use
+<strong>File → Open…</strong> and choose
+<code>desktop_ticker/ticker_firmware/ticker_firmware.ino</code>. (The
+IDE wants a sketch to be inside a folder with the same name. That’s
+already the case, so don’t rename the folder.)</li>
+<li><strong>Or copy-paste:</strong> <em>File → New Sketch</em>, delete
+everything in the new window, open <code>ticker_firmware.ino</code> in a
+text editor, copy <strong>all</strong> of it, paste it into the IDE, and
+save.</li>
+</ul>
+<h2 id="select-board-and-port-then-upload">5.5 Select board and port,
+then upload</h2>
+<ol type="1">
+<li>Plug in the Arduino with USB.</li>
+<li><strong>Tools → Board → Arduino AVR Boards → Arduino Uno.</strong>
+(Nano: choose <em>Arduino Nano</em>. For most cheap clones also set
+<strong>Tools → Processor → ATmega328P (Old Bootloader)</strong>.)</li>
+<li><strong>Tools → Port →</strong> usually <code>/dev/ttyACM0</code>
+(original Uno) or <code>/dev/ttyUSB0</code> (clones with a CH340 chip).
+If you’re not sure, unplug the board, look at the list, plug it back in,
+and pick the port that appeared.</li>
+<li>Click <strong>Upload</strong> (the → arrow). Wait for “Done
+uploading”.</li>
+</ol>
+<p>If the IDE reports “Sketch uses … bytes” and “Done uploading”, the
+Arduino part is finished.</p>
+<h1 id="first-power-on">6. First power-on</h1>
+<h2 id="contrast">6.1 Contrast</h2>
+<p>Right after power-on the LCD shows</p>
+<pre><code> Desktop Ticker
+  2/8 move 5 ok</code></pre>
+<ul>
+<li><strong>Nothing visible but the backlight is on:</strong> slowly
+turn the pot all the way from one end to the other.</li>
+<li><strong>A row of solid blocks on the top line:</strong> good news.
+Power and contrast are fine, but the LCD isn’t getting data yet. Check
+that the upload worked, then check RS, E and D4–D7.</li>
+<li>Adjust the pot until the letters are crisp and the empty areas look
+(almost) blank.</li>
+</ul>
+<h2 id="key-test-check-your-keypad-wiring">6.2 Key test (check your
+keypad wiring)</h2>
+<ol type="1">
+<li>Press any key to leave the start screen and get to the menu.</li>
+<li>Press <strong>7</strong> (or scroll down to <code>7 Key test</code>
+and press <strong>5</strong>).</li>
+<li>The screen shows <code>KEY TEST  DD=end</code>. Each key you press
+is shown with its row and column, e.g. <code>Key 5   R2 C2</code>.</li>
+<li>Press every key and compare it with the printed label. The top row
+should give <code>1 2 3 A</code>, the left column
+<code>1 4 7 *</code>.</li>
+<li>Press <strong>D twice</strong> to go back to the menu.</li>
+</ol>
+<p>If keys are wrong:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>What you see</th>
+<th>Cause</th>
+<th>Fix in <code>ticker_firmware.ino</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Top row gives <code>1 4 7 *</code></td>
+<td>rows and columns swapped</td>
+<td>swap the lists: <code>rowPins[] = {6, A0, A1, A2}</code> and
+<code>colPins[] = {10, 9, 8, 7}</code></td>
+</tr>
+<tr class="even">
+<td>Top row gives <code>* 0 # D</code></td>
+<td>rows upside down</td>
+<td><code>rowPins[] = {7, 8, 9, 10}</code></td>
+</tr>
+<tr class="odd">
+<td>Top row gives <code>A 3 2 1</code></td>
+<td>columns mirrored</td>
+<td><code>colPins[] = {A2, A1, A0, 6}</code></td>
+</tr>
+<tr class="even">
+<td>A whole row or column is dead</td>
+<td>loose wire</td>
+<td>re-seat that row/column wire</td>
+</tr>
+<tr class="odd">
+<td>Just the labels differ</td>
+<td>different key print</td>
+<td>edit the characters in <code>keyMap[][]</code></td>
+</tr>
+</tbody>
+</table>
+<p>After changing the sketch, upload again. (The key test also prints
+<code>KEY:x</code> lines in the Serial Monitor at 115200 baud, but only
+while the bridge is <strong>not</strong> running.)</p>
+<h1 id="pc-side-the-bridge">7. PC side: the bridge</h1>
+<h2 id="automatic-setup-zorin-os-ubuntu">7.1 Automatic setup (Zorin OS /
+Ubuntu)</h2>
+<p>Open a terminal in the unzipped <code>desktop_ticker</code>
+folder:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install python3 python3-venv     <span class="co"># usually already installed</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> setup_linux.sh</span></code></pre></div>
+<p>The script:</p>
+<ul>
+<li>adds you to the <code>dialout</code> group (log out/in once
+afterwards),</li>
+<li>creates a Python environment in <code>desktop_ticker/venv</code> and
+installs <code>pyserial</code> and <code>yfinance</code>,</li>
+<li>starts the bridge. Leave that terminal window open; press
+<strong>Ctrl+C</strong> to stop.</li>
+</ul>
+<p>Useful options: <code>--no-launch</code> (only set up),
+<code>--mock</code> (fake prices, no internet needed),
+<code>--service</code> (start the bridge automatically at login as a
+systemd user service), <code>--flash</code> (upload the firmware with
+<code>arduino-cli</code>, if you have it installed). Running the script
+twice is safe.</p>
+<h2 id="manual-setup">7.2 Manual setup</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> desktop_ticker</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv venv</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">venv/bin/pip</span> install <span class="at">-r</span> requirements.txt</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">venv/bin/python</span> ticker_bridge.py <span class="at">--test</span>          <span class="co"># offline self-test: should end with SELF-</span><span class="al">TEST</span><span class="co"> OK</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">venv/bin/python</span> ticker_bridge.py <span class="at">--fetch</span> SI=F    <span class="co"># checks the internet connection to Yahoo</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">venv/bin/python</span> ticker_bridge.py                 <span class="co"># run the bridge (auto-detects the Arduino)</span></span></code></pre></div>
+<p>Other options: <code>--port /dev/ttyUSB0</code> (choose the port
+yourself), <code>--list-ports</code>, <code>--mock</code>,
+<code>-v</code> (more log output), <code>--auto 60</code> (also push a
+fresh price every 60 s; the default is manual refresh only),
+<code>--min-fetch 2</code> (don’t ask Yahoo for the same symbol more
+than once every 2 s; extra requests get the cached price).</p>
+<h2 id="important-one-program-per-port">7.3 IMPORTANT: one program per
+port</h2>
+<p>A serial port can only be used by <strong>one program at a
+time</strong>:</p>
+<ul>
+<li><strong>Close the Arduino IDE Serial Monitor</strong> (and Serial
+Plotter) while the bridge runs.</li>
+<li><strong>Stop the bridge (Ctrl+C)</strong> before uploading a new
+sketch from the IDE, then start it again afterwards. If you installed it
+as a service: <code>systemctl --user stop ticker-bridge</code> before
+uploading and <code>systemctl --user start ticker-bridge</code>
+after.</li>
+</ul>
+<p>Note: opening the port resets the Uno, so the start screen appears
+again when the bridge starts. That’s normal.</p>
+<h2 id="windows-if-youre-not-on-linux">7.4 Windows (if you’re not on
+Linux)</h2>
+<p>Install Python 3 from python.org, then in <em>Command Prompt</em>
+inside the project folder:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bat"><code class="sourceCode dosbat"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>py <span class="at">-m</span> venv venv</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>venv\Scripts\pip install <span class="at">-r</span> requirements.txt</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>venv\Scripts\python ticker_bridge.py -<span class="at">-list-ports</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>venv\Scripts\python ticker_bridge.py -<span class="at">-port</span> COM3</span></code></pre></div>
+<p>Use the COM number shown in the Arduino IDE (<em>Tools → Port</em>)
+or in Device Manager. Clone boards may need the CH340 driver.
+<code>setup_linux.sh</code> is for Linux only.</p>
+<h1 id="daily-use">8. Daily use</h1>
+<ol type="1">
+<li>Plug the Arduino into the PC and start the bridge
+(<code>bash setup_linux.sh</code>, or
+<code>venv/bin/python ticker_bridge.py</code>).</li>
+<li>Pick a ticker; the price appears within a few seconds.</li>
+</ol>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Where</th>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Menu</td>
+<td><strong>2</strong> or <strong>A</strong></td>
+<td>move up</td>
+</tr>
+<tr class="even">
+<td>Menu</td>
+<td><strong>8</strong> or <strong>B</strong></td>
+<td>move down</td>
+</tr>
+<tr class="odd">
+<td>Menu</td>
+<td><strong>5</strong> or <strong>#</strong></td>
+<td>open the highlighted item</td>
+</tr>
+<tr class="even">
+<td>Menu</td>
+<td><strong>1</strong>, <strong>3</strong>, <strong>4</strong>,
+<strong>6</strong></td>
+<td>open that ticker directly (1 Gold, 3 EUR/USD, 4 Bitcoin, 6
+Apple)</td>
+</tr>
+<tr class="odd">
+<td>Menu</td>
+<td><strong>7</strong></td>
+<td>key test</td>
+</tr>
+<tr class="even">
+<td>Price screen</td>
+<td><strong>*</strong> or <strong>C</strong></td>
+<td>refresh (fetch the price again)</td>
+</tr>
+<tr class="odd">
+<td>Price screen</td>
+<td><strong>D</strong> or <strong>#</strong></td>
+<td>back to the menu</td>
+</tr>
+<tr class="even">
+<td>“No reply” screen</td>
+<td><strong>*</strong> / <strong>C</strong> or <strong>D</strong> /
+<strong>#</strong></td>
+<td>try again / back to the menu</td>
+</tr>
+<tr class="odd">
+<td>Key test</td>
+<td><strong>D</strong>, <strong>D</strong></td>
+<td>back to the menu</td>
+</tr>
+</tbody>
+</table>
+<p>Why do 2 and 5 not open Silver/NVIDIA directly? Because 2/8/5 are the
+up/down/select keys. Use the arrows for those two, or set
+<code>#define NUMERIC_NAV 0</code> in the sketch: then only A/B/#
+navigate and every key 1–7 is a direct pick.</p>
+<p><strong>Reading the price screen:</strong></p>
+<pre><code>SILVER  XAG/USD*     &lt;- name, symbol, &quot;*&quot; = a filled dot: price is less than 1 minute old
+$61.10 +0.35%^       &lt;- price, change since yesterday&#39;s close, up/down arrow</code></pre>
+<p>After one minute the top line changes to
+e.g. <code>SILVER    5m ago</code>, so you know how old the price is.
+Press <strong>*</strong> to refresh. While waiting it shows
+<code>Refreshing...</code>. If no answer arrives within 10 seconds it
+shows <code>No reply / Bridge offline?</code>. Long prices are shortened
+to fit 16 characters (e.g. gold <code>$4183.2</code> when the change is
+large).</p>
+<p>Menu entries: <code>1 XAU/USD Gold</code>,
+<code>2 XAG/USD Silvr</code>, <code>3 EUR/USD Forex</code>,
+<code>4 BTC/USD Coin</code>, <code>5 NVDA Stock</code>,
+<code>6 AAPL Stock</code>, <code>7 Key test</code>.</p>
+<h1 id="troubleshooting">9. Troubleshooting</h1>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>What to check</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Blank screen, no backlight</strong></td>
+<td>USB plugged in? LCD pin 2 → 5V, pin 1 → GND, pin 15 → 220 Ω → 5V,
+pin 16 → GND. Solder joints on the header.</td>
+</tr>
+<tr class="even">
+<td><strong>Backlight on, but no characters</strong></td>
+<td>Turn the contrast pot through its full range. Without a pot, try
+another resistor value (section 4.3).</td>
+</tr>
+<tr class="odd">
+<td><strong>Only a row of blocks</strong></td>
+<td>Power/contrast OK, but no data: was the upload successful? Check
+RS→D12, E→D11, D4→D5, D5→D4, D6→D3, D7→D2, and RW→GND.</td>
+</tr>
+<tr class="even">
+<td><strong>Garbage / random characters</strong></td>
+<td>D4–D7 swapped or loose (they are “crossed”, see 4.1), RW not
+grounded, bad solder joint. Press the Arduino’s reset button.</td>
+</tr>
+<tr class="odd">
+<td><strong>Wrong keys</strong></td>
+<td>Run the key test (6.2) and apply the fix from its table.</td>
+</tr>
+<tr class="even">
+<td><strong>“No reply / Bridge offline?”</strong></td>
+<td>Bridge not running, or running on another port, or it has no data
+yet and the internet is down. Look at the bridge window: it should print
+<code>Selected SI=F</code> when you pick a ticker.</td>
+</tr>
+<tr class="odd">
+<td><strong>Port busy / “Device or resource busy” / upload
+fails</strong></td>
+<td>Another program has the port. Close the Serial Monitor, stop the
+bridge (Ctrl+C), or
+<code>systemctl --user stop ticker-bridge</code>.</td>
+</tr>
+<tr class="even">
+<td><strong>“Permission denied: /dev/ttyACM0”</strong></td>
+<td><code>sudo usermod -a -G dialout $USER</code>, then log out and in
+again. Check with <code>groups</code> (it should list
+<code>dialout</code>).</td>
+</tr>
+<tr class="odd">
+<td><strong>Port /dev/ttyUSB0 disappears right after plugging in (CH340
+clones)</strong></td>
+<td>Ubuntu’s <code>brltty</code> braille service grabs it:
+<code>sudo apt remove brltty</code>, then re-plug.</td>
+</tr>
+<tr class="even">
+<td><strong>No port shown at all</strong></td>
+<td>Try another USB cable (some are charge-only) and another USB socket.
+Run <code>venv/bin/python ticker_bridge.py --list-ports</code>.</td>
+</tr>
+<tr class="odd">
+<td><strong>yfinance errors (“Too Many Requests”, “rate limited”, “No
+price data”)</strong></td>
+<td>Yahoo limits how often you can ask. The bridge waits automatically
+(5 s, 10 s, 20 s … up to 5 minutes) and meanwhile sends the last known
+price. Don’t mash refresh; wait a few minutes. Check the internet
+connection with
+<code>venv/bin/python ticker_bridge.py --fetch SI=F</code>. Update the
+library with <code>venv/bin/pip install -U yfinance</code>.</td>
+</tr>
+<tr class="even">
+<td><strong>Price looks “old”</strong></td>
+<td>Markets are closed at weekends and at night (except Bitcoin), so the
+price doesn’t move. Yahoo data can also be delayed.</td>
+</tr>
+<tr class="odd">
+<td><strong><code>LiquidCrystal.h</code> or <code>Keypad.h</code>: No
+such file</strong></td>
+<td>Install the library (section 5.3).</td>
+</tr>
+<tr class="even">
+<td><strong>Upload error
+<code>avrdude: stk500_getsync()</code></strong></td>
+<td>Wrong board or port selected; for a Nano clone choose <em>ATmega328P
+(Old Bootloader)</em>. Make sure nothing is connected to D0/D1.</td>
+</tr>
+</tbody>
+</table>
+<p>Good luck, and enjoy your ticker!</p>
+<p><em>Prices come from Yahoo Finance through the unofficial
+<code>yfinance</code> library. They are for information only and may be
+delayed; don’t make trading decisions based on them.</em></p>
+</body>
+</html>
